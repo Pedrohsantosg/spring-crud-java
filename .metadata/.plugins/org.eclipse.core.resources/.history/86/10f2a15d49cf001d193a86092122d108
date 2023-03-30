@@ -1,0 +1,17 @@
+package com.unifacisa.springTeste.services;
+
+import com.unifacisa.springTeste.entities.Person;
+import com.unifacisa.springTeste.repositories.PersonRepository;
+
+public class PersonService {
+	
+	PersonRepository personRepository;
+	
+	public void addPerson(Integer id, String name, String user, Integer password  ) {
+		
+		Person p = new Person(null, name, user, password);
+		personRepository.save(p);
+		
+	}
+
+}

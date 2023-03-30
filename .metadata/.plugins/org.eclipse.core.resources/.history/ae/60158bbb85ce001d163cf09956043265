@@ -1,0 +1,5 @@
+package com.unifacisa.springTeste.entities;
+
+public class Person {
+
+}

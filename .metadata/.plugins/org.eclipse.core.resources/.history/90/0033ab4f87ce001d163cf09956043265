@@ -1,0 +1,53 @@
+package com.unifacisa.springTeste.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+public class Person {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	private String name;
+	private String user;
+	private Integer password;
+	
+	public Person(Integer age, String name, Integer password) {
+		this.age = age;
+		this.name = name;
+		this.password = password;
+	}
+	
+
+	public Person () {
+		
+	}
+	
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getPassword() {
+		return password;
+	}
+	public void setPassword(Integer password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", name=" + name + ", password=" + password + "]";
+	}
+	
+
+}
